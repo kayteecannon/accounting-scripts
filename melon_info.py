@@ -1,8 +1,7 @@
 """Print out all the melons in our inventory."""
 
 
-from melons import melon_names, melon_seedlessness, melon_prices
-
+from melons import melons
 
 def print_melon(name, seedless, price):
     """Print each melon with corresponding attribute information."""
@@ -14,5 +13,5 @@ def print_melon(name, seedless, price):
     print(f'{name}s {have_or_have_not} seeds and are ${price:.2f}')
 
 
-for i in melon_names:
-    print_melon(melon_names[i], melon_seedlessness[i], melon_prices[i])
+for melon in melons:
+    print_melon(melon, melons[melon]['seedless'], melons[melon]['price'])
